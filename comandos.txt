@@ -1,0 +1,3 @@
+.\.venv\Scripts\Activate.ps1  >> Ativa o ambiente virtual
+pip install -r .\requirements.txt >> Instala as bibliotecas do arquivo requirements
+set-ExecutionPolicy AllSigned >> caso tenham problemas inicializamos o ambiente virtual no powershell
