@@ -13,12 +13,14 @@ TIPO_ARQUIVOS_VALIDOS = [
     'Site', 'Youtube', 'Pdf', 'Csv', 'Txt'
 ]
 
-CONFIG_MODELOS = {'Groq': 
-                         {'modelos': ['llama-3.1-70b-versatile', 'gemma2-9b-it', 'mixtral-8x7b-32786'],
-                         'chat': ChatGroq},
-                  'OpenAi': 
+CONFIG_MODELOS = {'OpenAi': 
                         {'modelos': ['gpt-4o-mini', 'gpt-4o','o1-preview', 'o1-mini'],
-                         'chat': ChatOpenAI}}
+                         'chat': ChatOpenAI},
+                    'Groq': 
+                         {'modelos': ['llama-3.1-70b-versatile', 'gemma2-9b-it', 'mixtral-8x7b-32786'],
+                         'chat': ChatGroq}
+                    }
+                  
 
 MEMORIA = ConversationBufferMemory()
 MEMORIA.chat_memory.add_ai_message('Olá Saliner!')
