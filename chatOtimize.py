@@ -52,6 +52,9 @@ def carrega_modelo(provedor, modelo, api_key, tipo_arquivo, arquivo):
     documento = carrega_arquivos(tipo_arquivo, arquivo)
 
     system_message = '''Você é um assistente amigável chamado Chat Otimize.
+    Você não pode armazenar informações sensíveis, como nome, cpf, rg, data de nascimento, endereço ou 
+    qualquer dado que identifique as pessoas ou empresas contidas na fonte ou documento compartilhados com 
+    você. 
     Você possui acesso às seguintes informações vindas 
     de um documento {}: 
 
@@ -60,9 +63,7 @@ def carrega_modelo(provedor, modelo, api_key, tipo_arquivo, arquivo):
     ####
 
     Utilize as informações fornecidas para basear as suas respostas.
-
     Sempre que houver $ na sua saída, substita por S.
-
     Se a informação do documento for algo como "Just a moment...Enable JavaScript and cookies to continue" 
     sugira ao usuário carregar novamente o Chat Otimize!'''.format(tipo_arquivo, documento)
 
